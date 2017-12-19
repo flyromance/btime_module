@@ -1,0 +1,93 @@
+.alerts {
+    position: relative;
+    z-index: 2;
+    height: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.alerts-hide {
+    display: none;
+}
+
+.alerts .alerts-text {
+    display: block;
+    background: #ffe7a7;
+    color: #be911b;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.alerts .alerts-btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 30px;
+}
+
+.alerts:hover .alerts-text {
+    background: #ffefc5;
+    color: #ebc04e;
+}
+
+.alerts:hover .alerts-btn-close {
+    color: #ebc04e;
+}
+
+.alerts .alerts-btn-close i {
+    float: right;
+    width: 30px;
+    line-height: 30px;
+    color: #be911b;
+    font-size: 16px;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.alerts-inline {
+    margin-top: 10px;
+    width: 45%;
+}
+
+.alerts-inline .alerts-text {
+    border-radius: 30px;
+    padding: 0 38px;
+}
+
+.alerts .loading {
+    background: url('../img/loading.gif') no-repeat 262px center;
+    display: block;
+    line-height: 30px;
+    text-align: left;
+    cursor: pointer;
+    white-space: nowrap;
+    padding-left: 312px;
+    color: #999;
+}
+
+.alerts .wait {
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #999;
+}
+
+.alerts.hide-text .loading {
+    display: inline-block;
+    width: 36px;
+    height: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+    background-position: 50% 50%;
+    padding: 0;
+    line-height: 1;
+    white-space: nowrap;
+    text-indent: 100%;
+}

@@ -1,0 +1,40 @@
+<div class="feed-item js-feed" data-gid="{{gid}}" data-channel-position="{{getChannelPosition(s_log)}}" data-stick="{{data.is_stick}}">
+    {{if data.identity}}
+    <span class="sign-identity"></span>
+    {{/if}}
+    <a class="media media-feed" href="{{open_url}}" title="{{data.title}}">
+        <div class="media-body">
+            <h1 class="media-title">{{#data.title}}</h1>
+            {{if data.summary && data.summary.length }}
+            <p class="media-text multi-truncate">{{data.summary}}</p>
+            {{/if}}
+            <p class="media-extra">
+                {{if data.source}}
+                <span class="col cite {{if data.author_uid && data.author_uid != 0}}has{{/if}}">
+                    {{if data.author_img}}
+                    <span class="cite-logo">
+                        <img src="{{data.author_img}}" width="16" height="16" alt="{{data.source}}">
+                    </span>
+                    {{else}}
+                    <span class="cite-logo no-logo">
+                        <span class="name">{{data.source.substring(0, 1)}}</span>
+                    </span>
+                    {{/if}}
+                    <span class="cite-name" data-uid="{{data.author_uid}}">{{data.source}}</span>
+                </span>
+                {{/if}} {{if data.pdate_str && data.is_stick != 1}} {{if data.source}}
+                <span class="col dot"></span>
+                {{/if}}
+                <span class="col time">{{data.pdate_str}}</span>
+                {{/if}} {{if data.tag}}
+                <span class="col dot"></span>
+                <span class="col tag" style="color:{{data.tag[0].str_color}};">{{data.tag[0].name}}</span>
+                {{/if}}
+            </p>
+        </div>
+    </a>
+    {{if has_dislike }}
+    <span class="close">
+        <i class="icon"></i>不感兴趣</span>
+    {{/if}}
+</div>

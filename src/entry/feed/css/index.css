@@ -1,0 +1,26 @@
+.clearfix:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+p {
+    margin: 0;
+}
+
+a.media-feed {
+    text-decoration: none;
+} 
+
+.feed-item .badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    padding: 0 6px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    white-space: nowrap;
+}

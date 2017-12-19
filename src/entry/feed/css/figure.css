@@ -1,0 +1,115 @@
+.figure {
+    display: block;
+    overflow: hidden;
+}
+
+.figure-img {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: #f0f0f0 url('/static/img/common/placeholder.png') no-repeat 50% 50%;
+}
+
+.figure img {
+    -webkit-transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+}
+
+.figure:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.figure .mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    filter: Alpha(opacity=0);
+    opacity: 0;
+}
+
+.figure .text-mask-lg,
+.figure .text-mask-sm{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.figure .text-mask-lg{
+    height: 59px;
+    background: url('//p0.ssl.cdn.btime.com/t015d5ffc9144384c99.png') repeat-x 0 100%;
+}
+.figure .text-mask-sm{
+    height: 39px;
+    background: url('//p0.ssl.cdn.btime.com/t01a75ed230ee6bca3c.png') repeat-x 0 100%;
+}
+
+.figure:hover .mask,
+.figure:hover .mask{
+    filter: Alpha(opacity=30);
+    opacity: 0.3;
+}
+
+.figure:hover .icon-play,
+.figure:hover .icon-play{
+    display: block;
+}
+
+.figure[data-type='3']:hover .badge,
+.figure[data-type='6']:hover .badge{
+    display: none;
+}
+
+.figure-caption {
+    overflow: hidden;
+    color: #444;
+    font-size: 14px;
+    line-height: 20px;
+    word-wrap: break-word;
+}
+
+.figure-caption.single-truncate{
+    height: 20px;
+}
+
+.figure-caption.multi-truncate{
+    height: 40px;
+}
+
+.figure-caption:hover {
+    color: #ed5c59;
+}
+
+.figure-img + .figure-caption {
+    margin-top: 7px;
+}
+
+.figure-caption-stack {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 7px;
+    z-index: 2;
+    height: 18px;
+    overflow: hidden;
+    padding: 0 9px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    word-wrap: break-word;
+}
+
+.figure-caption-stack.first{
+    font-size: 16px;
+}
+
+.figure-group .figure,
+.figure-grid .figure {
+    float: left;
+}

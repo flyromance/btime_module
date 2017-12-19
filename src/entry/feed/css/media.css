@@ -1,0 +1,53 @@
+.media {
+    display: table;
+    position: relative;
+    z-index: 1;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.media-obj {
+    display: table-cell;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.media .media-obj-wrap{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.media-obj img {
+    -webkit-transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+}
+
+.media-obj:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.media-obj:hover .icon-play{
+    display: block;
+}
+
+.media[data-type="3"] .media-obj:hover .badge,
+.media[data-type="6"] .media-obj:hover .badge{
+    display: none;
+}
+
+.media-body {
+    display: table-cell;
+    position: relative;
+    vertical-align: top;
+}
+
+.media-extra {
+    color: #999;
+}
+
+.media-extra .col {
+    float: left;
+    white-space: nowrap;
+}
