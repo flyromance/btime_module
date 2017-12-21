@@ -14,7 +14,6 @@ const CONFIG = {
     guid: monitor.util.getGuid(),
     url: 'http://third.api.btime.com/News/list',
 }
-console.log(123)
 var $container = $('<div></div>', {
     id: 'feed-container',
     bk: 'btime-bk',
@@ -27,6 +26,16 @@ monitor.data.getBase = function () {
     }
 }
 
+var _monitorDataGetTrack = monitor.data.getTrack
+monitor.data.getTrack = function () {
+    return {
+        action: 'page_view',
+        guid: monitor.util.getGuid(),
+        client_id: 38,
+        from: 'gamelow',
+    }
+}
+
 // 默认URL配置，并启用鼠标点击和按键统计
 monitor.setConf({
     defaultUrl: '//click.btime.com/api/weblog',
@@ -35,12 +44,15 @@ monitor.setConf({
     // viewUrl: 'https://click.btime.com/api/weblog',
 });
 
+monitor.getTrack()
 monitor.getClickAndKeydown()
-monitor.getScroll({
-    container: $container,
-    scrollBindTarget: window,
-    selector: '.js-feed'
-})
+
+// 不需要可视窗打点
+// monitor.getScroll({
+//     container: $container,
+//     scrollBindTarget: window,
+//     selector: '.js-feed'
+// })
 
 // 用模板把数据转成字符串
 function toHtml(data, prefix, hasDislike) {
