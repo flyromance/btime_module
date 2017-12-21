@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@q/qcdn": "^3.0.33",
     "@q/qcdn-loader": "^1.1.2",
     "art-template": "^4.12.2",
     "art-template-loader": "^1.4.3",
@@ -23,7 +24,6 @@
     "express": "^4.16.2",
     "glob": "^7.1.2",
     "html-webpack-plugin": "^2.30.1",
-    "qcdn": "0.0.1-security",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
