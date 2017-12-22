@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.config.js --color",
-    "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.js"
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.js",
+    "deploy": "node deploy"
   },
   "author": "",
   "license": "ISC",

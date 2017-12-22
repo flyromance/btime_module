@@ -55,3 +55,8 @@ exports.getRouter = function () {
 
     return router
 }
+
+exports.getFiles = function() {
+    var files = glob.sync(path.join(config.distDir, '*/*.js'))
+    return files;
+}
