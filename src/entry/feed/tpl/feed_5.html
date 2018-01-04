@@ -8,7 +8,7 @@
             {{each data.covers as item index }}
                 {{ if index < 3 }}
                 <div class="figure">
-                    <img class="lazy" src="{{ cutter(data.covers[0], '225-130') }}" alt="{{@ data.title}}" width="100%" height="100%">
+                    <img class="lazy" src="{{ cutter(data.covers[index], '225-130') }}" alt="{{@ data.title}}" width="100%" height="100%">
                 </div>
                 {{/if}}
             {{/each}}
